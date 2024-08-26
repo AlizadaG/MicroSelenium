@@ -1,0 +1,15 @@
+﻿@NotificationServer_HostAddress = http://localhost:5226
+
+POST {{NotificationServer_HostAddress}}/api/EMails
+Content-Type : application/json 
+
+{
+  "to": "muratvuranok@hotmail.com",
+  "from": "murat.vuranok@code.edu.az",
+  "bcc": "mrtvrnk@gmail.com",
+  "cc": "murat.vuranok@code.edu.az",
+  "subject": "Test Mail",
+  "body": "Mail Test olarak gönderilmiştir" ,
+  "attachments": []
+    
+}

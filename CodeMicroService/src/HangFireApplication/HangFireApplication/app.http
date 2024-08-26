@@ -1,0 +1,11 @@
+### Jobsearch Post Request
+
+POST http://localhost:5135/JobsSearch/Search
+Content-Type: application/json
+
+{
+  "KeyWords": ["javascript","react"],
+  "Companies": ["https://www.jobsearch.az/vacancies"],
+  "SearchNow":true,
+  "ScheduleTime":null
+}

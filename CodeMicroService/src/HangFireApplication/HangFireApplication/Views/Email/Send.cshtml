@@ -1,0 +1,61 @@
+﻿@model EmailBodyDto
+
+<div class="row mt-5">
+    <div class="col-12 shadow-sm rounded px-2 py-3">
+        <div class="container">
+            <h2 class="mb-4">Mail Gönder</h2>
+            <form method="post" enctype="multipart/form-data">
+
+                <div class="form-group mb-3">
+                    <label for="ScheduleTime">Schedule Time:</label>
+                    <input type="datetime-local" class="form-control" asp-for="ScheduleTime" placeholder="Select date">
+                </div>
+
+                <div class="form-group form-check mb-3">
+                    <input type="checkbox" class="form-check-input" asp-for="SendNow">
+                    <label class="form-check-label" for="SendNow">Send Now</label>
+                </div>
+
+
+                <div class="form-group mb-3">
+                    <label for="From">Gönderen E-Posta:</label>
+                    <input type="email" class="form-control" asp-for="From" placeholder="Gönderen E-posta" required>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="To">Kime:</label>
+                    <input type="email" class="form-control" asp-for="To" placeholder="Alıcı E-posta" required>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="Cc">CC:</label>
+                    <input type="email" class="form-control" asp-for="Cc" placeholder="CC E-posta">
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="Bcc">BCC:</label>
+                    <input type="email" class="form-control" asp-for="Bcc" placeholder="BCC E-posta">
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="Subject">Konu:</label>
+                    <input type="text" class="form-control" asp-for="Subject" placeholder="E-posta Konusu" required>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="Body">Mesaj Gövdesi:</label>
+                    <textarea class="form-control" asp-for="Body" rows="5" placeholder="Mesajınızı buraya yazın..." required></textarea>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="formFile" class="form-label">Ekler:</label>
+                    <input class="form-control" type="file" asp-for="Attachments" id="formFile" multiple>
+                </div>
+
+                <div class="form-group mb-2">
+                    <button type="submit" class="btn btn-outline-dark float-end">Gönder</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
